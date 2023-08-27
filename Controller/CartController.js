@@ -72,3 +72,4 @@ async function deleteCart(req, res) {
     }
 }
 module.exports = [createCart, getAllCart, getSingleCart, updateCart, deleteCart]
+
