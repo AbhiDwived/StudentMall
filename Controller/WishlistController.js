@@ -23,7 +23,6 @@ async function createWishlist(req, res) {
         else
             res.status(500).send({ result: "Fail", message: "Internal Server Error!!!" })
     }
-    
 }
 async function getAllWishlist(req, res) {
     try {
