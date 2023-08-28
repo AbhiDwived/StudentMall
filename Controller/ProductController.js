@@ -19,7 +19,7 @@ async function createProduct(req, res) {
         await data.save()
         res.send({ result: "Done", message: "Record is Created!!!", data: data })
     } catch (error) {
-        // console.log(error);
+        
         if (error.errors.name)
             res.send({ result: "Fail", message: error.errors.name.message })
         else if (error.errors.maincategory)
@@ -133,7 +133,7 @@ async function deleteProduct(req, res) {
         await data.deleteOne()
         res.send({ result: "Done", message: "Record is Deleted!!!" })
     } catch (error) {
-        console.log(error);
+        
         res.status(500).send({ result: "Fail", message: "Internal Server Error!!!" })
     }
 }
@@ -152,7 +152,7 @@ async function searchProduct(req,res){
         ]})  
         res.send({result:"Done",count:data.length,data:data})    
     } catch (error) {
-        console.log(error);
+        
         res.status(500).send({result:"Fail",message:"Internal Server Error!!!"})
     }
 }

@@ -54,7 +54,7 @@ async function verifyBuyer(req,res,next){
     var token = req.headers.authorization
     jwt.verify(token,process.env.JWT_BUYER_KEY,(error=>{
         if(error){
-            console.log(error)
+            
             res.status(401).send({result:"Fail",message:"You Are Not Authorized to Access This API!!!"})
         }
         else

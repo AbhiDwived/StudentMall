@@ -175,14 +175,14 @@ async function forgetPassword1(req, res) {
                 `
             }
             transporter.sendMail(mailOptions, (error) => {
-                console.log(error)
+                
             })
             res.send({ result: "Done", message: "OTP Has Been Sent to Your Registered Email ID!!!" })
         }
         else
             res.send({ result: "Fail", message: "Username Not Found!!!" })
     } catch (error) {
-        // console.log(error);
+        
         res.status(500).send({ result: "Fail", message: "Internal Server Error!!!" })
     }
 }
@@ -199,7 +199,7 @@ async function forgetPassword2(req, res) {
         else
             res.send({ result: "Fail", message: "UnAuthorized Activity!!!" })
     } catch (error) {
-        // console.log(error);
+        
         res.status(500).send({ result: "Fail", message: "Internal Server Error!!!" })
     }
 }
@@ -225,7 +225,7 @@ async function forgetPassword3(req, res) {
         else
             res.send({ result: "Fail", message: "UnAuthorized Activity!!!" })
     } catch (error) {
-        // console.log(error);
+        
         res.status(500).send({ result: "Fail", message: "Internal Server Error!!!" })
     }
 }
